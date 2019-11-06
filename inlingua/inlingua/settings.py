@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for kyphrase project
+# Scrapy settings for inlingua project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,20 +9,20 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'kyphrase'
+BOT_NAME = 'inlingua'
 
-SPIDER_MODULES = ['kyphrase.spiders']
-NEWSPIDER_MODULE = 'kyphrase.spiders'
+SPIDER_MODULES = ['inlingua.spiders']
+NEWSPIDER_MODULE = 'inlingua.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'kyphrase (+http://www.yourdomain.com)'
+#USER_AGENT = 'inlingua (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-# CONCURRENT_REQUESTS = 32
+#CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -37,7 +37,6 @@ ROBOTSTXT_OBEY = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
-TELNETCONSOLE_PORT = None
 
 # Override the default request headers:
 #DEFAULT_REQUEST_HEADERS = {
@@ -48,13 +47,13 @@ TELNETCONSOLE_PORT = None
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'kyphrase.middlewares.KyphraseSpiderMiddleware': 543,
+#    'inlingua.middlewares.InlinguaSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'kyphrase.middlewares.KyphraseDownloaderMiddleware': 543,
+#    'inlingua.middlewares.InlinguaDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,10 +64,9 @@ TELNETCONSOLE_PORT = None
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'kyphrase.pipelines.KyphrasePipeline': 300,
-    'kyphrase.pipelines.JsonWriterPipeline': 800,
-}
+#ITEM_PIPELINES = {
+#    'inlingua.pipelines.InlinguaPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

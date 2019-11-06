@@ -8,7 +8,7 @@
 import scrapy
 
 
-class Word(scrapy.Item):
-    phrase = scrapy.Field()
-    definition = scrapy.Field()
-    url = scrapy.Field()
+class InlinguaItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    pass
