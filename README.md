@@ -1,9 +1,9 @@
 # Scrapy Phrases and Make Them Yours
 
-![SLANGSTORY](https://github.com/symoon94/phrases-scrapy/blob/master/img/toy-story-woody-buzz-meme-slang-dialect-linguistic-diversity.jpg)
+<p align="center"><img width="50%" src="https://github.com/symoon94/phrases-scrapy/blob/master/img/toy-story-woody-buzz-meme-slang-dialect-linguistic-diversity.jpg" /></p>
 
 I'm a computer science student at the University of Arizona and it's actually been only a year since I came to the states. Still struggling with English but feel like I actually enjoy learning the foreign language! As far as I'm concerned, using __verbal phrases__ with a brilliant command is the most important key to communicate persuasively any time anywhere. It is true that I'm exposed to the foreign environment so improving my speech bit by bit but I'm not going to be too pleased to stay this level. Anyway, I made this repository just for memorizing vocabularies even in the middle of the road 😁 Jajaja. All the files here are simple and have no special things (but might seem like a pretty dirty in a way I used selectors because I'm not even much familiar with the world of web) so that beginners can modify them easily (hopefully..). For memorizing words even outside, you may import an excel file into an app such as Lexilize what I'm going to use. _Yea, I totally forgot there are a bunch of useful vocabulary apps that's why I coded crawlers. However, I'm pretty sure own words crawler can give oneself power not to give up easily._
-<center><img src="https://github.com/symoon94/phrases-scrapy/blob/master/img/namjoon2noogoo.png" width="300" height="300"></center>
+<p align="center"><img width="30%" src="https://github.com/symoon94/phrases-scrapy/blob/master/img/namjoon2noogoo.png" /></p>
 * (Above) Lexilize.
 
 ## Four Crawlers
