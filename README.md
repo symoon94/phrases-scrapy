@@ -34,7 +34,6 @@ Append _robots.txt_ at the end of the domain and check the allowance.
 3. Copy the code below into the spider file (e.g., kyphrase.py) and change _URL_, _indexlist_, the _class_ name, and _name_ under the class to fit your website where you want to crawl.
 
         import scrapy
-        import string
 
         URL = "https://[YOUR_DOMAIN]/{index}"
         indexlist = ["hello world", 1, 2, 3]
@@ -44,9 +43,9 @@ Append _robots.txt_ at the end of the domain and check the allowance.
             start_urls = [URL.format(index=index) for index in indexlist]
 
             def parse(self, response):
-                # implement parsing here
+                """implement parsing here"""
+
                 import ipdb; ipdb.set_trace() # recommend use the ipdb, an IPython debugger, but not required
-                pass
 
     * To install the IPython debugger(ipdb):
 
@@ -61,3 +60,8 @@ Append _robots.txt_ at the end of the domain and check the allowance.
     - [Selectors](https://docs.scrapy.org/en/latest/topics/selectors.html)
     - [Items](https://docs.scrapy.org/en/latest/topics/items.html)
     - [Item Pipeline](https://docs.scrapy.org/en/latest/topics/item-pipeline.html)
+
+### Error Handling
+1. AttributeError: 'TelnetConsole' object has no attribute 'port'
+
+- add a line "_TELNETCONSOLE_PORT = None_" into the settings.py

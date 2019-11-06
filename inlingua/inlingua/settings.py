@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'inlingua.spiders'
 #USER_AGENT = 'inlingua (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -37,6 +37,7 @@ ROBOTSTXT_OBEY = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
+TELNETCONSOLE_PORT = None
 
 # Override the default request headers:
 #DEFAULT_REQUEST_HEADERS = {
