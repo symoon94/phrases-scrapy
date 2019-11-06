@@ -1,11 +1,13 @@
 # Scrapy Phrases and Make Them Yours
 
-## Website I tried to scrapy?
-[https://knowyourphrase.com/](https://knowyourphrase.com/)
 
-## Could I crawl this website?
-Append _robots.txt_ at the end of the domain and check the allowance.
-[https://knowyourphrase.com/robots.txt](https://knowyourphrase.com/robots.txt)
+## Four Crawlers
+1. [kyphrase.py](https://github.com/symoon94/phrases-scrapy/blob/master/kyphrase/kyphrase/spiders/kyphrase.py) [(ENG) Idiom](https://knowyourphrase.com/) # the use of the item pipeline.
+2. [inlingua.py](https://www.inlingua-edinburgh.co.uk/200-common-phrasal-verbs-with-meanings-and-example-sentences/) - [(ENG) 200-common-phrasal-verbs]("https://www.inlingua-edinburgh.co.uk/200-common-phrasal-verbs-with-meanings-and-example-sentences/") # the simplest crawler-1.
+3. [urbandictionary.py](https://github.com/symoon94/phrases-scrapy/blob/master/urbandictionary/urbandictionary/spiders/urbandictionary.py) - [(ENG) Slang](https://www.urbandictionary.com/) # the multiple subpages crawler.
+4. [spanish.py](https://github.com/symoon94/phrases-scrapy/blob/master/spanish/spanish/spiders/spanish.py) - [(SPN) 1000-most-common-spanish-words]("https://1000mostcommonwords.com/1000-most-common-spanish-words/") # the simplest crawler-2.
+
+
 ## Example
 
 ### Usage
@@ -36,19 +38,21 @@ Append _robots.txt_ at the end of the domain and check the allowance.
 
 3. Copy the code below into the spider file (e.g., kyphrase.py) and change _URL_, _indexlist_, the _class_ name, and _name_ under the class to fit your website where you want to crawl.
 
-        import scrapy
+``` py
+import scrapy
 
-        URL = "https://[YOUR_DOMAIN]/{index}"
-        indexlist = ["hello world", 1, 2, 3]
+URL = "https://[YOUR_DOMAIN]/{index}"
+indexlist = ["hello world", 1, 2, 3]
 
-        class KyphraseSpider(scrapy.Spider):
-            name = "kyphrase"
-            start_urls = [URL.format(index=index) for index in indexlist]
+class KyphraseSpider(scrapy.Spider):
+        name = "kyphrase"
+        start_urls = [URL.format(index=index) for index in indexlist]
 
-            def parse(self, response):
-                """implement parsing here"""
+        def parse(self, response):
+        """implement parsing here"""
 
-                import ipdb; ipdb.set_trace() # recommend use the ipdb, an IPython debugger, but not required
+        import ipdb; ipdb.set_trace() # recommend use the ipdb, an IPython debugger, but not required
+```
 
     * To install the IPython debugger(ipdb):
 
@@ -72,6 +76,9 @@ Append _robots.txt_ at the end of the domain and check the allowance.
                 EXTENSIONS = {
                 'scrapy.extensions.telnet.TelnetConsole': None,
                 }
+2. If your crawler is blocked, you should check the allowance by appending _robots.txt_ at the end of the domain and modify settings.py.
+
+        ex) [https://knowyourphrase.com/robots.txt](https://knowyourphrase.com/robots.txt)
 
 ## Author
 
