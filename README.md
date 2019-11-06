@@ -1,27 +1,30 @@
 # Scrapy Phrases and Make Them Yours
+I'm a computer science student of the University of Arizona and it's actually been only a year since I came to the states. Still struggling with English but feel like I actually enjoy learning the foreign language! As far as I'm concerned, using phrases with a brilliant command is the most important key to communicate persuasively any time any where. It is ture that I'm living in the states so lots of opportunity to exposure the foreign environment but I'm not going to be too pleased to stay this level. Anyway, I made this repository just for memorizing vocabularies even in the middle of the road 😁 Jajaja. All the files here are simple and have no special things (but might seem like a pretty dirty in a way I used selectors because I'm not even much familiar with the world of web) so that beginners can modify them easily (hopefully..). For memorizing words even outside, you may import excel file into an app such as Lexilize what I'm going to use.
 
+##
 
 ## Four Crawlers
-1. [kyphrase.py](https://github.com/symoon94/phrases-scrapy/blob/master/kyphrase/kyphrase/spiders/kyphrase.py) [(ENG) Idiom](https://knowyourphrase.com/) # the use of the item pipeline.
-2. [inlingua.py](https://www.inlingua-edinburgh.co.uk/200-common-phrasal-verbs-with-meanings-and-example-sentences/) - [(ENG) 200-common-phrasal-verbs]("https://www.inlingua-edinburgh.co.uk/200-common-phrasal-verbs-with-meanings-and-example-sentences/") # the simplest crawler-1.
-3. [urbandictionary.py](https://github.com/symoon94/phrases-scrapy/blob/master/urbandictionary/urbandictionary/spiders/urbandictionary.py) - [(ENG) Slang](https://www.urbandictionary.com/) # the multiple subpages crawler.
-4. [spanish.py](https://github.com/symoon94/phrases-scrapy/blob/master/spanish/spanish/spiders/spanish.py) - [(SPN) 1000-most-common-spanish-words]("https://1000mostcommonwords.com/1000-most-common-spanish-words/") # the simplest crawler-2.
+1. [kyphrase.py](https://github.com/symoon94/phrases-scrapy/blob/master/kyphrase/kyphrase/spiders/kyphrase.py) [(ENG) Idiom](https://knowyourphrase.com/)  # the use of the item pipeline.
+2. [inlingua.py](https://www.inlingua-edinburgh.co.uk/200-common-phrasal-verbs-with-meanings-and-example-sentences/) - [(ENG) 200-common-phrasal-verbs]("https://www.inlingua-edinburgh.co.uk/200-common-phrasal-verbs-with-meanings-and-example-sentences/")  # the simplest crawler-1.
+3. [urbandictionary.py](https://github.com/symoon94/phrases-scrapy/blob/master/urbandictionary/urbandictionary/spiders/urbandictionary.py) - [(ENG) Slang](https://www.urbandictionary.com/)  # the multiple subpages crawler.
+4. [spanish.py](https://github.com/symoon94/phrases-scrapy/blob/master/spanish/spanish/spiders/spanish.py) - [(SPN) 1000-most-common-spanish-words]("https://1000mostcommonwords.com/1000-most-common-spanish-words/")  # the simplest crawler-2.
 
 
 ## Example
 
 ### Usage
-
+To scrape the site and save the data:
+    $ cd kyphrase
     $ scrapy crawl kyphrase
 
 ### Tutorial
-0. Choose a website you want to crawl! If you want to check out the allowance for the access, append '_robots.txt_' at the end of the domain.
+1. Choose a website you want to crawl! If you want to check out the allowance for the access, append '_robots.txt_' at the end of the domain.
 
-1. To start scrapy:
+2. To start scrapy:
 
         $ scrapy startproject kyphrase
 
-2. Make your spider file (e.g., kyphrase.py) under the _spiders_ directory.
+3. Make your spider file (e.g., kyphrase.py) under the _spiders_ directory.
 
         ├── kyphrase
         │   ├── __init__.py
@@ -36,7 +39,7 @@
         │       └── kyphrase.py
         └── scrapy.cfg
 
-3. Copy the code below into the spider file (e.g., kyphrase.py) and change _URL_, _indexlist_, the _class_ name, and _name_ under the class to fit your website where you want to crawl.
+4. Copy the code below into the spider file (e.g., kyphrase.py) and change _URL_, _indexlist_, the _class_ name, and _name_ under the class to fit your website where you want to crawl.
 
 ``` py
 import scrapy
@@ -58,11 +61,11 @@ class KyphraseSpider(scrapy.Spider):
 
             $ pip install ipdb
 
-4. Figure out what html tags are surrounding the information what you want to extract. To view the source of the web page, append _view-source:_ at the beginning of the url. In my case:
+5. Figure out what html tags are surrounding the information what you want to extract. To view the source of the web page, append _view-source:_ at the beginning of the url. In my case:
 
         view-source:https://knowyourphrase.com/a
 
-5. Code the parsing part using the debugger or a web developer tool. To note about selectors, items, and pipelines, please refer to the link below.
+6. Code the parsing part using the debugger or a web developer tool. To note about selectors, items, and pipelines, please refer to the link below.
 
     - [Selectors](https://docs.scrapy.org/en/latest/topics/selectors.html)
     - [Items](https://docs.scrapy.org/en/latest/topics/items.html)
