@@ -4,7 +4,7 @@
 
 I'm a computer science student at the University of Arizona and it's actually been only a year since I came to the states. Still struggling with English but feel like I actually enjoy learning the foreign language! As far as I'm concerned, using __verbal phrases__ with a brilliant command is the most important key to communicate persuasively any time anywhere. It is true that I'm exposed to the foreign environment so improving my speech bit by bit but I'm not going to be too pleased to stay this level. Anyway, I made this repository just for memorizing vocabularies even in the middle of the road 😁 Jajaja. All the files here are simply just for the format and have no special things (but might seem like a pretty dirty in a way I used selectors because I'm not even much familiar with the world of web) so that beginners can modify them easily (hopefully..). For memorizing words even outside, you may import an excel file into an app such as Lexilize what I'm going to use. _Yea, I totally forgot there are a bunch of useful vocabulary apps that's why I coded crawlers. However, I'm pretty sure my own words crawler can give me power not to give up easily._
 <p align="center"><img width="30%" src="https://github.com/symoon94/phrases-scrapy/blob/master/img/namjoon2noogoo.png" /></p>
-<center>* The screenshot of Lexilize.</center>
+<p align="center">* A Screenshot of Lexilize.</p>
 
 ## Four Crawlers
 1. [kyphrase.py](https://github.com/symoon94/phrases-scrapy/blob/master/kyphrase/kyphrase/spiders/kyphrase.py) [(ENG) Idiom](https://knowyourphrase.com/)  # the use of the item pipeline.
@@ -17,11 +17,14 @@ I'm a computer science student at the University of Arizona and it's actually be
 
 ### Usage
 To scrape the site and save the data:
+
     $ cd kyphrase
     $ scrapy crawl kyphrase
 
 ### Tutorial
 1. Choose a website you want to crawl! If you want to check out the allowance for the access, append '_robots.txt_' at the end of the domain.
+
+        ex) [https://knowyourphrase.com/robots.txt](https://knowyourphrase.com/robots.txt)
 
 2. To start scrapy:
 
@@ -79,12 +82,11 @@ class KyphraseSpider(scrapy.Spider):
 
 - add a line "_TELNETCONSOLE_PORT = None_" into the settings.py or comment off this:
 
-                EXTENSIONS = {
-                'scrapy.extensions.telnet.TelnetConsole': None,
-                }
-2. If your crawler is blocked, you should check the allowance by appending _robots.txt_ at the end of the domain and modify settings.py.
+        EXTENSIONS = {
+        'scrapy.extensions.telnet.TelnetConsole': None,
+        }
 
-        ex) [https://knowyourphrase.com/robots.txt](https://knowyourphrase.com/robots.txt)
+2. If your crawler is blocked, you should check the allowance by appending _robots.txt_ at the end of the domain and modify settings.py.
 
 ## Author
 
