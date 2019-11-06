@@ -64,4 +64,8 @@ Append _robots.txt_ at the end of the domain and check the allowance.
 ### Error Handling
 1. AttributeError: 'TelnetConsole' object has no attribute 'port'
 
-- add a line "_TELNETCONSOLE_PORT = None_" into the settings.py
+- add a line "_TELNETCONSOLE_PORT = None_" into the settings.py or comment off this:
+
+                EXTENSIONS = {
+                'scrapy.extensions.telnet.TelnetConsole': None,
+                }
