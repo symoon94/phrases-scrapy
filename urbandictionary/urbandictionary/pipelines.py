@@ -15,7 +15,7 @@ class UrbandictionaryPipeline(object):
 class JsonWriterPipeline(object):
 
     def open_spider(self, spider):
-        self.path = f'../../../output/{spider.name}/'
+        self.path = f'../output/{spider.name}/'
         self.makedirs(self.path)
         self.filename = self.path + spider.name
         self.file = open(f'{self.filename}.jl', 'w')
