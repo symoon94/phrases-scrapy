@@ -6,12 +6,15 @@
 ## Could I crawl this website?
 Append _robots.txt_ at the end of the domain and check the allowance.
 [https://knowyourphrase.com/robots.txt](https://knowyourphrase.com/robots.txt)
+## Example
 
-## Usage
+### Usage
 
     $ scrapy crawl kyphrase
 
-## Tutorial
+### Tutorial
+0. Choose a website you want to crawl! If you want to check out the allowance for the access, append '_robots.txt_' at the end of the domain.
+
 1. To start scrapy:
 
         $ scrapy startproject kyphrase
@@ -69,3 +72,7 @@ Append _robots.txt_ at the end of the domain and check the allowance.
                 EXTENSIONS = {
                 'scrapy.extensions.telnet.TelnetConsole': None,
                 }
+
+## Author
+
+Sooyoung Moon / [@symoon94](https://www.facebook.com/msy0128)

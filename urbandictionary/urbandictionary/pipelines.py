@@ -8,7 +8,7 @@ import os
 import json
 import pandas as pd
 
-class KyphrasePipeline(object):
+class UrbandictionaryPipeline(object):
     def process_item(self, item, spider):
         return item
 

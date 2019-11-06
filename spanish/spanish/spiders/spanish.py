@@ -9,7 +9,7 @@ class SpanishSpider(scrapy.Spider):
 
     def __init__(self):
         self.start_urls = [URL]
-        self.path = './output/'
+        self.path = '../../../output/spanish/'
         self.makedirs()
         self.filename = self.path + "spanish.xlsx"
         self.dic = {}

@@ -9,7 +9,7 @@ class InlinguaSpider(scrapy.Spider):
 
     def __init__(self):
         self.start_urls = [URL]
-        self.path = './output/'
+        self.path = '../../../output/inlingua/'
         self.makedirs()
         self.filename = self.path + "inlingua.xlsx"
 
